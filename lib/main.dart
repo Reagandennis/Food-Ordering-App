@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, unnecessary_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:food_ordering_app/Forms/DishAddForm.dart';
@@ -23,11 +25,11 @@ class MyApp extends StatelessWidget {
       '/login': (context) => LoginPage(),
       '/dash': (context) => Dashboard(),
       '/admindash': (context) => AdminDashboard(),
-      '/profile' : (context) => ProfileScreen(),
-      '/loadDash' : (context) => DashboardLoader(),
-      '/dishEditForm' : (context) => DishEditForm(),
-      '/dishAddForm' : (context) => DishAddForm(),
-      '/userDetailsForm' : (context) => UserDetailForm(),
+      '/profile': (context) => ProfileScreen(),
+      '/loadDash': (context) => DashboardLoader(),
+      '/dishEditForm': (context) => DishEditForm(),
+      '/dishAddForm': (context) => DishAddForm(),
+      '/userDetailsForm': (context) => UserDetailForm(),
       // '/signup' : (context) => SignupPage(),
     });
   }
