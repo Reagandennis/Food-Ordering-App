@@ -135,8 +135,7 @@ class __CartTotalState extends State<_CartTotal> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Scaffold.of(context).showSnackBar(SnackBar(
-                      content: "Buying not supported yet".text.make()));
+                  Scaffold.of(context).hasAppBar;
                   setState(() {
                     totalprice = _cart.cart.getTotalAmount();
                   });

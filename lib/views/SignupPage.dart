@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app/animation/FadeAnimation.dart';
 import 'package:food_ordering_app/models/ApiError.dart';
 import 'package:food_ordering_app/models/ApiRespose.dart';
 import 'package:food_ordering_app/services/UserServices.dart';
-import 'package:food_ordering_app/views/Restaurant/AdminDashboard.dart';
 import 'package:food_ordering_app/widgets/msgToast.dart';
 
 class SignupPage extends StatelessWidget {

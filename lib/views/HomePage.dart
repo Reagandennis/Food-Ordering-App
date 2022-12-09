@@ -7,6 +7,11 @@ import 'package:food_ordering_app/views/SignupPage.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: MyHomePage(
+        title: "Home Page",
+      ),
+    );
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -111,4 +116,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+  MyHomePage({String title}) {}
 }

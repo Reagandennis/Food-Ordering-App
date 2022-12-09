@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:food_ordering_app/Forms/DishAddForm.dart';
 import 'package:food_ordering_app/models/ApiError.dart';
 import 'package:food_ordering_app/models/ApiRespose.dart';
@@ -17,7 +16,6 @@ class AdminDashboard extends StatefulWidget {
 }
 
 class _AdminDashboardState extends State<AdminDashboard> {
-
   @override
   Widget build(BuildContext context) {
     final DishList args = ModalRoute.of(context).settings.arguments as DishList;
@@ -84,13 +82,14 @@ class CatalogList extends StatelessWidget {
   CatalogList({Key key, this.dishList});
   @override
   Widget build(BuildContext context) {
-    return (dishList == null )? "Nothing to show".text.make().centered() :
-    ListView.builder(
-      shrinkWrap: true,
-      itemCount: dishList.length,
-      itemBuilder: (context, index) {
-        return CatalogItemAdmin(dish: dishList.getIndex(index));
-      },
-    );
+    return (dishList == null)
+        ? "Nothing to show".text.make().centered()
+        : ListView.builder(
+            shrinkWrap: true,
+            itemCount: dishList.length,
+            itemBuilder: (context, index) {
+              return CatalogItemAdmin(dish: dishList.getIndex(index));
+            },
+          );
   }
 }

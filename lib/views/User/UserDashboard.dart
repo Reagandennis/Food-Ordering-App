@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:food_ordering_app/models/ApiError.dart';
 import 'package:food_ordering_app/models/ApiRespose.dart';
 import 'package:food_ordering_app/models/DishList.dart';
@@ -43,8 +42,8 @@ class _DashboardState extends State<Dashboard> {
       body: CatalogList(dishList: args),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-         Navigator.push(
-             context, MaterialPageRoute(builder: (context) => CartPage()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => CartPage()));
         },
         child: Icon(Icons.shopping_cart),
       ),
@@ -88,12 +87,14 @@ class CatalogList extends StatelessWidget {
   CatalogList({Key key, this.dishList});
   @override
   Widget build(BuildContext context) {
-    return (dishList==null)?"Nothing to show".text.xl3.make().centered():ListView.builder(
-      shrinkWrap: true,
-      itemCount: dishList.length,
-      itemBuilder: (context, index) {
-        return CatalogItemUser(dish: dishList.getIndex(index));
-      },
-    );
+    return (dishList == null)
+        ? "Nothing to show".text.xl3.make().centered()
+        : ListView.builder(
+            shrinkWrap: true,
+            itemCount: dishList.length,
+            itemBuilder: (context, index) {
+              return CatalogItemUser(dish: dishList.getIndex(index));
+            },
+          );
   }
 }
